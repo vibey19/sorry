@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* General Styling */
+body {
+  min-height: 100vh;
+  background: #ffe6f2; /* Soft pink */
+  font-family: "Poppins", serif;
+  text-align: center;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h2 {
+  color: #ff4b5c;
+  font-size: 2rem;
+}
+
+h3 {
+  color: #a55c7c;
+  font-size: 1.2rem;
+}
+
+/* Poem Styling */
+.poem-container {
+  background: rgba(255, 182, 193, 0.9);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(255, 105, 180, 0.3);
+  max-width: 600px;
+  margin: 2rem auto;
+  animation: fadeIn 1.5s ease-in-out;
+  position: relative;
+  border: 3px solid #ff4b5c;
+}
+
+/* Soft glow effect */
+.poem-container::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: linear-gradient(45deg, #ff4b5c, #ffb6c1);
+  filter: blur(15px);
+  z-index: -1;
+}
+
+/* Poem Title */
+.poem-title {
+  color: #ff4b5c;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Poem Subtitle */
+.poem-subtitle {
+  color: #a55c7c;
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Poem Text */
+.poem {
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-family: "Poppins", serif;
+}
+
+/* Floating Hearts Animation */
+.hearts {
+  font-size: 15px; /* Even smaller hearts */
+  position: fixed;
+  top: -1vh;
+  left: 0;
+  animation: fall 4s ease-in infinite;
+  opacity: 0.7;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Button */
+button {
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  background-color: #ff4b5c;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-color {
+  background: #ff758c;
+}
+
+button:hover {
+  background-color: #ff758c;
+  transform: scale(1.1);
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
